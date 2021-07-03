@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  color: #575e75;
+}
+
+#container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 10px 10px 10px;
+  /* padding-top: 50px; */
+  margin-bottom: 50px;
+}
+
+a {
+  color: #4d97ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-wrap {
+  text-align: center;
+  margin: 30px;
+}
+
+#project-id {
+  font-size: .8rem;
+  font-weight: bold;
+  padding: .5rem;
+  margin-left: 5px;
+  color: #575e75;
+  width: 6rem;
+}
+
+.btn {
+  /* display: block; */
+  background: #4d97ff;
+  color: white;
+  font-size: .875rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  padding: 0.6rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  /* width: 30em; */
+  margin: 30px auto;
+  text-decoration: none;
+}
+
+#json-editor {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #f9a83a;
+  border-radius: 5px;
+  background-color: #fafafa;
+  padding: .75rem 1rem;
+  outline: none;
+}

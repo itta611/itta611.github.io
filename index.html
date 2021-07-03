@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Scratch JSON Loader</title>
+</head>
+<body>
+  <div id="container">
+    <img src="logo.svg" alt="Scratch JSON Loader">
+    <p>
+      sb3ファイルから簡単にJSONファイルを簡単に取得できます。<br>
+      zipに名前を変更→解凍<br>
+      と<br>
+      圧縮→sb3へ名前を変更<br>
+      の手間を省くことができます。
+    </p>
+    <span id="url">scratch.mit.edu/projects/<input type="number" id="project-id" placeholder="Project ID"></span><br>
+    <div class="btn-wrap"><span id="load-btn" class="btn">LOAD</span></div>
+    <textarea id="json-editor" disabled placeholder="ここにJSONデータが出力されます。
+JSON data is output here."></textarea>
+    <img src="" id="thumbnail" width="300">
+    <div class="btn-wrap"><a href="#" id="export" class="btn">変更済みsb3を保存</a></div>
+    <h2>Credits</h2>
+    <ul>
+      <li><a href="https://jquery.com/">jQuery</a></li>
+      <li><a href="https://stuk.github.io/jszip/">JSZip</a></li>
+      <li><a href="https://github.com/eligrey/FileSaver.js/">FileSaver.js</a></li>
+    </ul>
+    <h2>Code</h2>
+    <a href="https://github.com/itta611/itta611.github.io/">https://github.com/itta611/itta611.github.io/</a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
