@@ -3,7 +3,7 @@ body {
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   color: #575e75;
   line-height: 2em;
-  font-size: 1.2em;
+  font-size: 1.0vw;
 }
 
 #container {
@@ -58,5 +58,4 @@ a {
   padding: .75rem 1rem;
   outline: none;
   line-height: 2em;
-  font-size: 1.3em;
 }
