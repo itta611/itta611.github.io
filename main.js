@@ -5,17 +5,29 @@ $('#load-btn').click(function() {
   projectId = $('#project-id').val();
   $('#load-btn').text('LOADING...');
   $.ajax({
-    url: `https://projects.scratch.mit.edu/${projectId}/`,
+    url: `https://trampoline.turbowarp.org/proxy/projects/${projectId}`,
     data: "",
-    dataType: "text",
+    dataType: "json",
     success: function (response) {
-      $('#json-editor').val(response);
-      $('#json-editor').removeAttr('disabled');
-      $('#load-btn').text('LOAD');
-      $('#thumbnail').attr('src', `https://uploads.scratch.mit.edu/projects/thumbnails/${projectId}.png`);
+      let token = response["project_token"];
+      $.ajax({
+        url: `https://projects.scratch.mit.edu/${projectId}/?token=${token}`,
+        data: "",
+        dataType: "text",
+        success: function (response) {
+          $('#json-editor').val(response);
+          $('#json-editor').removeAttr('disabled');
+          $('#load-btn').text('LOAD');
+          $('#thumbnail').attr('src', `https://uploads.scratch.mit.edu/projects/thumbnails/${projectId}.png`);
+        },
+        error: function () {
+          alert('エラーが発生しました。\nThe error occurred.');
+          $('#load-btn').text('LOAD');
+        }
+      });
     },
-    error: function () {
-      alert('エラーが発生しました。\nThe error occurred.')
+    error: function() {
+      alert('エラーが発生しました。\nThe error occurred.');
       $('#load-btn').text('LOAD');
     }
   });
